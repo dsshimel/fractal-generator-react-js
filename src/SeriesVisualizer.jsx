@@ -19,11 +19,23 @@ class SeriesVisualizer extends React.Component {
 
   renderSeries() {
     const canvas = this.canvasRef.current;
-    const boundingRect = canvas.parentElement.getBoundingClientRect();
-    canvas.setAttribute('width', boundingRect.width);
-    canvas.setAttribute('height', boundingRect.height);
-    const canvasWidth = canvas.getAttribute('width');
-    const canvasHeight = canvas.getAttribute('height');
+    let canvasWidth, canvasHeight;
+    if (this.props.width && this.props.height) {
+      canvasWidth = this.props.width;
+      canvasHeight = this.props.height;
+    } else {
+      const boundingRect = canvas.parentElement.getBoundingClientRect();
+      canvasWidth = boundingRect.width;
+      canvasHeight = boundingRect.height;
+    }
+
+    // TODO: wire this up properly
+    canvasWidth = 640;
+    canvasHeight = 480;
+
+    canvas.setAttribute('width', canvasWidth);
+    canvas.setAttribute('height', canvasHeight);
+    
     console.log(canvasWidth + "x" + canvasHeight);
     const ctx = canvas.getContext('2d');
 
