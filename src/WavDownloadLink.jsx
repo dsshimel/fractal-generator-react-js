@@ -108,7 +108,7 @@ class WavDownloadLink extends React.Component {
     const wavBlobUrl = URL.createObjectURL(wavBlob);
     const filename = "fractal_wav_file" + this.props.genNumber + ".wav";
     return (
-      <a href={wavBlobUrl} download={filename}>Save as WAV</a>
+      <a href={wavBlobUrl} download={filename}>Save {this.props.seriesName} as WAV</a>
     );
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import FractalGeneration from './FractalGeneration.jsx';
 import {iterateFractal} from './LinearFractal.js';
+import './FractalGenerationsViewer.css';
 
 class FractalGenerationsViewer extends React.Component {
   constructor(props) {
@@ -22,11 +23,13 @@ class FractalGenerationsViewer extends React.Component {
     }
 
     const generationElementsList = generationsList.map(
-      (gen, index) => { return <FractalGeneration key={index} fractal={gen} genNumber={index} /> }
+      (gen, index) => { 
+        return <FractalGeneration key={index} fractal={gen} genNumber={index} /> 
+      }
     );
 
     return (
-      <div>
+      <div className="generationsContainer">
         {generationElementsList}
       </div>
     );

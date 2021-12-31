@@ -36,8 +36,12 @@ class App extends React.Component {
     // top third and the generations the bottom third.
     return (
       <main>
-        <FractalIngredientsViewer generator={this.state.generator} initiator={this.state.initiator} />
-        <FractalGenerationsViewer generator={this.state.generator} initiator={this.state.initiator} numGenerations={4} />
+        <div className="ingredients">
+          <FractalIngredientsViewer generator={this.state.generator} initiator={this.state.initiator} />
+        </div>
+        <div className="generations">
+          <FractalGenerationsViewer className="generations" generator={this.state.generator} initiator={this.state.initiator} numGenerations={4} />
+        </div>
       </main>
     );
   }

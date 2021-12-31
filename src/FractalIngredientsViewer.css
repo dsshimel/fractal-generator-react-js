@@ -1,0 +1,14 @@
+.ingredientsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+}
+
+.generator {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.initiator {
+  grid-column: 2;
+  grid-row: 1;
+}

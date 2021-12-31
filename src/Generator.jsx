@@ -9,9 +9,9 @@ class Generator extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="generator">
+        <WavDownloadLink X={this.props.generator.X()} Y={this.props.generator.Y()} genNumber={-2} seriesName="generator" />
         <SeriesVisualizer X={this.props.generator.X()} Y={this.props.generator.Y()}/>
-        <WavDownloadLink X={this.props.generator.X()} Y={this.props.generator.Y()} genNumber={-1} />
       </div>
     );
   }

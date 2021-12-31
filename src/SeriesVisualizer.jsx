@@ -20,14 +20,14 @@ class SeriesVisualizer extends React.Component {
   renderSeries() {
     const canvas = this.canvasRef.current;
     let canvasWidth, canvasHeight;
-    if (this.props.width && this.props.height) {
+    /*if (this.props.width && this.props.height) {
       canvasWidth = this.props.width;
       canvasHeight = this.props.height;
-    } else {
+    } else {*/
       const boundingRect = canvas.parentElement.getBoundingClientRect();
       canvasWidth = boundingRect.width;
       canvasHeight = boundingRect.height;
-    }
+    // }
 
     // TODO: wire this up properly
     canvasWidth = 640;

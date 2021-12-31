@@ -1,6 +1,7 @@
 import React from 'react';
 import Generator from './Generator.jsx';
 import Initiator from './Initiator.jsx';
+import './FractalIngredientsViewer.css';
 
 class FractalIngredientsViewer extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class FractalIngredientsViewer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="ingredientsContainer">
         <Generator generator={this.props.generator} />
         <Initiator initiator={this.props.initiator} />
       </div>
