@@ -11,8 +11,9 @@ class FractalIngredientsViewer extends React.Component {
   render() {
     return (
       <div className="ingredientsContainer">
-        <Generator generator={this.props.generator} />
-        <Initiator initiator={this.props.initiator} />
+        <Generator generator={this.props.generator} availableWidth={this.props.availableWidth / 2} availableHeight={this.props.availableHeight} />
+        
+        <Initiator initiator={this.props.initiator} availableWidth={this.props.availableWidth / 2} availableHeight={this.props.availableHeight} />
       </div>
     );
   }

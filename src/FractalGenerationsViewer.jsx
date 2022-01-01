@@ -24,7 +24,8 @@ class FractalGenerationsViewer extends React.Component {
 
     const generationElementsList = generationsList.map(
       (gen, index) => { 
-        return <FractalGeneration key={index} fractal={gen} genNumber={index} /> 
+        // The division by 2 is because we're drawing a 2x2 grid of fractals. 
+        return <FractalGeneration key={index} fractal={gen} genNumber={index} availableWidth={this.props.availableWidth / 2} availableHeight={this.props.availableHeight / 2} /> 
       }
     );
 

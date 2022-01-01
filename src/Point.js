@@ -36,6 +36,5 @@ export function createRandomPoints(numPoints) {
   for (let i = 0; i < numPoints; i++) {
     result.push(new Point(x[i], y[i]));
   }
-  console.log(result);
   return result;
 }

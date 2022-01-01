@@ -15,7 +15,6 @@ class WavDownloadLink extends React.Component {
 
   convertFractalToAudioBuffer(X, Y) {
     const audioContext = new AudioContext();
-    console.log("Number of fractal points: " + X.length);
 
     // Create an empty audio buffer within the context that has the 
     // desired properties.
@@ -90,8 +89,6 @@ class WavDownloadLink extends React.Component {
       waveBytePosition += 2;
     }
 
-    console.log("first audio value: " + audioBuffer[0]);
-
     return new Blob([wavBuffer], {type: 'audio/wave'});
   }
 
@@ -106,9 +103,13 @@ class WavDownloadLink extends React.Component {
     const wavBlob = this.createWavBlobFromAudioBuffer(audioBuffer);
 
     const wavBlobUrl = URL.createObjectURL(wavBlob);
+    // TODO: do something other than genNumber to name the file
     const filename = "fractal_wav_file" + this.props.genNumber + ".wav";
     return (
-      <a href={wavBlobUrl} download={filename}>Save {this.props.seriesName} as WAV</a>
+      <p>
+        {this.props.seriesName + " "}
+        <a href={wavBlobUrl} download={filename}>(.wav)</a>
+      </p>
     );
   }
 }

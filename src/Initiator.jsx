@@ -10,8 +10,8 @@ class Initiator extends React.Component {
   render() {
     return (
       <div className="initiator">
-        <WavDownloadLink X={this.props.initiator.X()} Y={this.props.initiator.Y()} genNumber={-1} seriesName="initiator"/>
-        <SeriesVisualizer X={this.props.initiator.X()} Y={this.props.initiator.Y()}/>
+        <WavDownloadLink X={this.props.initiator.X()} Y={this.props.initiator.Y()} genNumber={-1} seriesName="Initiator"/>
+        <SeriesVisualizer X={this.props.initiator.X()} Y={this.props.initiator.Y()} width={this.props.availableWidth} height={this.props.availableHeight} />
       </div>
     );
   }

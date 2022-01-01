@@ -11,8 +11,8 @@ class FractalGeneration extends React.Component {
   render() {
     return (
       <div className={'generation' + this.props.genNumber}>
-        <WavDownloadLink X={this.props.fractal.X()} Y={this.props.fractal.Y()} genNumber={this.props.genNumber} seriesName={"generation" + this.props.genNumber} />
-        <SeriesVisualizer X={this.props.fractal.X()} Y={this.props.fractal.Y()} width={this.props.width} height={this.props.height}/>
+        <WavDownloadLink X={this.props.fractal.X()} Y={this.props.fractal.Y()} genNumber={this.props.genNumber} seriesName={"Generation" + this.props.genNumber} />
+        <SeriesVisualizer X={this.props.fractal.X()} Y={this.props.fractal.Y()} width={this.props.availableWidth} height={this.props.availableHeight} />
       </div>
     );
   }
