@@ -1,0 +1,12 @@
+.initiatorHeader {
+  display: flex;
+}
+
+.initiatorHeader button {
+  height: fit-content;
+  margin-left: 8px;
+}
+
+.initiatorHeader p {
+  margin: 0;
+}

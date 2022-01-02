@@ -1,0 +1,12 @@
+.generatorHeader {
+  display: flex;
+}
+
+.generatorHeader button {
+  height: fit-content;
+  margin-left: 8px;
+}
+
+.generatorHeader p {
+  margin: 0;
+}
