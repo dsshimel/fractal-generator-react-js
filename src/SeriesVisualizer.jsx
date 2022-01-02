@@ -52,9 +52,12 @@ class SeriesVisualizer extends React.Component {
     }
   }
 
+  onClick(e) {
+    debugger;
+  }
+
   render() {
-    // TODO: maybe pass the canvas size as a prop
-    return <canvas ref={this.canvasRef}></canvas>
+    return <canvas ref={this.canvasRef} onClick={this.onClick.bind(this)}></canvas>
   }
 }
 
