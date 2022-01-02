@@ -8,6 +8,10 @@ class Generator extends React.Component {
     super(props);
   }
 
+  // TODO: Instead of rendering the generator and initiator on canvas,
+  // render them as an SVG. This might make it easier to click and drag the 
+  // points around.
+  // TODO: genNumber={-2} looks weird. It's used for the file name.
   render() {
     return (
       <div className="generator">

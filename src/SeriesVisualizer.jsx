@@ -19,6 +19,10 @@ class SeriesVisualizer extends React.Component {
 
   renderSeries() {
     const canvas = this.canvasRef.current;
+
+    // TODO: Rather than setting the canvas dimensions here, they should
+    // already be established by the browser's layout of the page. So, we 
+    // should just be getting the width and height from the canvas element.
     let canvasWidth, canvasHeight;
     if (this.props.width && this.props.height) {
       canvasWidth = Math.floor(this.props.width);
@@ -26,13 +30,7 @@ class SeriesVisualizer extends React.Component {
     } else {
       canvasWidth = 960;
       canvasHeight = 640;
-      // const boundingRect = canvas.parentElement.getBoundingClientRect();
-      // canvasWidth = boundingRect.width;
-      // canvasHeight = boundingRect.height;
     }
-
-    console.log("canvas width: " + canvasWidth);
-    console.log("canvas height: " + canvasHeight);
 
     canvas.setAttribute('width', canvasWidth);
     canvas.setAttribute('height', canvasHeight);
